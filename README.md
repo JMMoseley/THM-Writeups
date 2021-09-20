@@ -1,6 +1,5 @@
-<p align="center">
-  <img src=/Images/thmlogo.png">
-</p>
+
+![TryHackMe Logo](https://github.com/JMMoseley/THM-Writeups/blob/main/Images/thmlogo.png)
 
 ## TryHackMe Writeups
 
