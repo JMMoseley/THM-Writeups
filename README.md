@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=/images/thmlogo.png">
+  <img src=/Images/thmlogo.png">
 </p>
 
 ## TryHackMe Writeups
