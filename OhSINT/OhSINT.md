@@ -16,10 +16,12 @@ Firstly, I download the task files which contain only one image called WindowxXP
 ### 1. What is this user avatar of?
 A good way to extract image metadata is using exiftool in the CLI or you can also gather the same information on [Jeffrey's Image Metadata Viewer Website](http://exif.regex.info/exif.cgi). Here you can see the output of both options:
 
-ExifTool Screenshot
+ExifTool Screenshot:
+
 ![exiftool](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/exiftool.png)
 
 Jeffrey's Image Metadata Viewer Website Screenshot:
+
 ![JeffreysMetadata](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/Jeffrey's%20Image%20Metadata%20screenshot.png)
 
 Upon running exiftool, the handle/name of the owner of the image was added to the copyright section. A quick google search shows that he has a Twitter profile, a Wordpress blog, and a GitHub account.
