@@ -3,6 +3,10 @@
 
 ## TryHackMe Writeups
 
+These are some of the rooms I have completed in TryHackMe. I hope these writeups are useful to you. 
+
+Thanks for visiting!
+ <script src="https://tryhackme.com/badge/80752"></script>
 
 ### Overview
 
