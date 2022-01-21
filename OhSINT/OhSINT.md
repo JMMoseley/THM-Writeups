@@ -1,69 +1,69 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Calibri;}
-{\colortbl;\red255\green255\blue255;\red5\green99\blue193;}
-{\*\expandedcolortbl;;\csgenericrgb\c1961\c38824\c75686;}
-\margl1440\margr1440\vieww25400\viewh16000\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+![banner](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/banner.png)
 
-\f0\fs24 \cf0 OhSINT - created by TryHackMe \
-Link: https://tryhackme.com/room/ohsint\
-\
-This is an OSINT (Open-Source Intelligence) Room. There are no tools required for this room,\
-all the information is readily available on the Interweb. \
-\
-Are you able to use open source intelligence to solve this challenge?\
-\
-What information can you possibly get with just one photo? - Download Task Files \
-\
-\pard\pardeftab720\ri0\partightenfactor0
-\cf0 Firstly, I download the task files which contain only one image called WindowxXP.jpg\
-\
-<taskfile.jpg>\
-\
-1. What is this user avatar of?\
-A good way to extract image metadata is using exiftool on the cli or you can also gather the same information on {\field{\*\fldinst{HYPERLINK "http://exif.regex.info/exif.cgi"}}{\fldrslt \cf2 \ul \ulc2 http://exif.regex.info/exif.cgi}} website.  Here you can see the output of both options. \
-\
-<exiftool.png>\
-<Jeffrey's Image Metadata screenshot>\
-\
+# [OhSINT](https://tryhackme.com/room/ohsint)  - created by [TryHackMe](https://tryhackme.com)
 
-\f1 Upon running exiftool we can gather that the handle/name of the owner to the image which is OWoodflint. A google search shows us that he has a Twitter profile, a Wordpress blog, and a GitHub account.\
+This is an OSINT (Open-Source Intelligence) room. There are no tools required for this room and
+all the information is readily available on the Interweb. 
 
-\f0 \
-<googleresults.png>\
-\
+## Are you able to use open source intelligence to solve this challenge?
 
-\f1 Clicking on the first result (Owoodflint\'92s Twitter Profrile) we can immediately get our first answer. \
+### What information can you possibly get with just one photo? - Download Task Files 
 
-\f0 <twitterprofile.png>\
-\
-2. 
-\f1 What city is this person in?\
-I tried doing some digging through their Twitter account and their blog and I didn\'92t find anything, so I then decided to visit their GitHub account we can see our answer upon visiting the page. \
-\
-<github.png>\
-\
-\
-\
-3. Whats the SSID of the WAP he connected to?\
-To find the answer to this question we first have to dig into those previous google results and see if there is any information that can helps us identify the SSID (Service Set Identifier) which identifies the wireless network he is connected to. Starting from the top of the google results, twitter seems to have some information that can be useful to answering this question.  The user has shared with us his BSSID (Basic service set identifier). If you don\'92t know what to do with this information you can visit https://osintcurio.us/2019/01/15/tracking-all-the-wifi-things/ and read more about wigle.net. \
-\
-<wiglescreenshot>\
-Find the purple circle pointing to the location and zoom in as far as you can to see the SSID.\
-<ssid.png>\
-\
-4. What is his personal email address?\
-We can go back to the google results to find this answer. I found it by going to the users GitHub account.\
-<github.png>\
-\
-5. What site did you find his email address on?\
-GitHub\
-\
-6. Where has he gone on holiday?\
-I went back to Twitter and didn\'92t find anything. So visited his blog one more time and found the location where he went on holiday.\
-<blogscreenshot.png>\
-\
-7. What is this persons password?\
-While it is bad practice to write notes, specifically credentials in the source code, developers sometimes do this to leave comments for other people in their team. If we take a look at the source code we can find a hidden word that looks like it can be the password. \
-<password>\
-}
+Firstly, I download the task files which contain only one image called WindowxXP.jpg
+
+![taskfile](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/WindowsXP.jpg)
+
+### 1. What is this user avatar of?
+A good way to extract image metadata is using exiftool in the CLI or you can also gather the same information on [Jeffrey's Image Metadata Viewer Website](http://exif.regex.info/exif.cgi). Here you can see the output of both options:
+
+ExifTool Screenshot
+![exiftool](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/exiftool.png)
+
+Jeffrey's Image Metadata Viewer Website Screenshot:
+![JeffreysMetadata](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/Jeffrey's%20Image%20Metadata%20screenshot.png)
+
+Upon running exiftool, the handle/name of the owner of the image was added to the copyright section. A quick google search shows that he has a Twitter profile, a Wordpress blog, and a GitHub account.
+
+![google](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/googleresults.png)
+
+Clicking on the first result (Owoodflint's Twitter Profile) I can immediately see the first answer. 
+
+![twitterProfile](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/TwitterProfile.png)
+
+### 2. What city is this person in?
+I did some digging through his Twitter account and blog and didn't find anything at first, so I then decided to visit their GitHub account we can see our second answer upon visiting the page.
+
+![GitHub](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/github.png)
+
+### 3. Whats the SSID of the WAP he connected to?
+To find the SSID (Service Set Identifier) which identifies the wireless network he is connected to. I recall that his twitter seemed to have some information that can be useful to answering this question.  
+
+![tweet](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/BSSIDTweet.png)
+
+The user has shared his BSSID (Basic service set identifier) in a tweet! If you don't know what to do with this information you can visit [Osint Curious Website](https://osintcurio.us/2019/01/15/tracking-all-the-wifi-things/) and read more about wigle.net. 
+
+![wigle](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/wiglescreenshot.pngg)
+
+Using the wigle.net search, I find a purple circle pointing to the location and zoom in as far as I can to see the SSID.
+
+![ssid](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/ssid.png)
+
+### 4. What is his personal email address?
+Fortunately this and the question 5 answer was already given to us! Both can be found by going to the users GitHub account.
+
+### 5. What site did you find his email address on?
+
+![GitHub](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/github.png)
+
+### 6. Where has he gone on holiday?
+
+I went back to Twitter and didn't find anything. So visited his blog one more time and found the location where he went on holiday.
+
+![blogpost](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/blogscreenshot.png)
+
+### 7. What is this persons password?
+While it is bad practice to write notes, specifically credentials in the source code, developers sometimes do this to leave comments for other people in their team. Not finding much else on the page, I take a look at the source code where I find a hidden (the font color is the same the background color) word that looks like it can be the password.  
+
+![password](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/password.png)
+
+This is a great beginners OSINT challenge and it was a lot of fun doing it. I hope this is helpful!
