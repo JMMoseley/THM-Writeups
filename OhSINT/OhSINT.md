@@ -66,6 +66,6 @@ I went back to Twitter and didn't find anything. So visited his blog one more ti
 ### 7. What is this persons password?
 While it is bad practice to write notes, specifically credentials in the source code, developers sometimes do this to leave comments for other people in their team. Not finding much else on the page, I take a look at the source code where I find a hidden (the font color is the same the background color) word that looks like it can be the password.  
 
-![password](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/password.png)
+![password](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/passwordscreenshot.png)
 
 This is a great beginners OSINT challenge and it was a lot of fun doing it. I hope this is helpful!
