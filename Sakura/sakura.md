@@ -10,6 +10,7 @@ Task 1 include a basic intro. So lets start with task 2.
 ## Task 2 - TIP-OFF 
 
 OSINT Dojo have found themselves victims of a cyber-attack. While there were not indicators of compromise or damage, there was an image left behind. 
+
 ![sakurapwnedletter](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/sakurapwnedletter.jpg)
 
 ### What username does the attacker go by?
@@ -17,6 +18,7 @@ OSINT Dojo have found themselves victims of a cyber-attack. While there were not
 Upon clicking on the link to download the image we can see that the link takes us to a GitHub page containing an image which has binary numbers as the background. I originally thought there could be a message here, or maybe more information in the metadata for this image. I was not able to do a quick save of this image to analyze it with Exiftool. So instead I looked at the source code for the page.
 
 Going through the page source we can see that there is a file path for the image with the user name we are looking for. 
+
 ![sourcecode](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/sourcecode.png)
 
 ## Task 3 - Recon
@@ -30,6 +32,7 @@ That search gives us some interesting results. First we see that user has a GitH
 
 I downloaded the repo from GitHub and then unzipped the file.
 Let's decrypt the PGP we found:
+
 ![PublicKey](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/publickey.png)
 
 Here we can find the user's email address.
@@ -101,7 +104,7 @@ There is a hint here. This is the task I mentioned at the beginning, were deep p
 
 Here is a list of the Deep Web Pastebin Links https://deepweblinks.net/pastebin/ in case you want to try to use the Dark Web to answer this question. 
 
-![deeppaste]](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/deeppaste.jpg)
+![deeppaste](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/deeppaste.jpg)
 
 Using the image provided by OSINT Dojo, we can see the URL for the location where the attacker save their WiFi SSIDs and passwords. However in order to view this specific paste, you must complete this URL by adding the MD5 hash to the end of the URL.
 
@@ -127,6 +130,7 @@ Their twitter account shows a retweet before their layover. And this image is of
 Look up some airports close to Bethesda to answer this question. 
 
 ![retweet](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/retweet.jpg)
+
 ![washingtonmonument](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/washigntonmonument.jpg)
 
 ### What airport did the attacker have their last layover in?
