@@ -10,14 +10,14 @@ Task 1 include a basic intro. So lets start with task 2.
 ## Task 2 - TIP-OFF 
 
 OSINT Dojo have found themselves victims of a cyber-attack. While there were not indicators of compromise or damage, there was an image left behind. 
-![taskfile]()
+![sakurapwnedletter]()
 
 ### What username does the attacker go by?
 
 Upon clicking on the link to download the image we can see that the link takes us to a GitHub page containing an image which has binary numbers as the background. I originally thought there could be a message here, or maybe more information in the metadata for this image. I was not able to do a quick save of this image to analyze it with Exiftool. So instead I looked at the source code for the page.
 
 Going through the page source we can see that there is a file path for the image with the user name we are looking for. 
-![sakurapwnedlettersourcecode]()
+![sourcecode]()
 
 ## Task 3 - Recon
 
@@ -29,8 +29,6 @@ Firstly, use the user name we found in the first task and do a simple google sea
 That search gives us some interesting results. First we see that user has a GitHub account. Going to GitHub we can see they have several repositories, one of them is called PGP. Surprisingly this repository contains a PGP key. This can be useful information.  
 
 I downloaded the repo from GitHub and then unzipped the file.
-![PGP]()
-
 Let's decrypt the PGP we found:
 ![PublicKey]()
 
@@ -49,6 +47,7 @@ The cybercriminal is on to us. They have already started updating their GitHub a
 GitHub maintains history of commits, including edits, deletions, or insertions. This information can be utilized to trace some of the attacker's cryptocurrency transactions.
 
 ### What cryptocurrency does the attacker own a cryptocurrency wallet for?
+
 Looking through the user's repositories we can see that they have a few crypto related repos. After looking through those I found some interesting information on their ETH repository. 
 Upon clicking on the repo, we can see there is only a mining script file. Nothing much to see here. However, if we click on commits we can see the user's commit history and here we can discover a cryptocurrency wallet address and also the website of the cryptocurrency mining pool. 
 
@@ -72,7 +71,7 @@ If we navigate to the page with the January transactions we can find the mining 
 
 Right on the same page where we found the mining pool received payments from, we can see the other type of cryptocurrency used by the attacker.
 
-![othercryptocurrency]()
+![othercrypto]()
 
 ## Task 5 - TAUNT
 
@@ -93,7 +92,7 @@ We will use leads from the Twitter account to the Dark Web and other platforms t
 If we go to the user's Twitter we can find a Tweet where the user mentions Access Points (APs)
 which contains an image that has an MD5 hash and text referring to WiFi and passwords. 
 
-![aikoTweet MD5]()
+![APs Tweet]()
 
 The user also mentions their lack of concern about someone finding their APs on the Dark Web, and hints that in order to do so, we will have to do a DEEP search and find where they PASTEd them. 
 They are refering to a paste site called Deep Paste. 
@@ -102,11 +101,9 @@ There is a hint here. This is the task I mentioned at the beginning, were deep p
 
 Here is a list of the Deep Web Pastebin Links https://deepweblinks.net/pastebin/ in case you want to try to use the Dark Web to answer this question. 
 
-![APs - MD5]()
+![deeppaste]]()
 
 Using the image provided by OSINT Dojo, we can see the URL for the location where the attacker save their WiFi SSIDs and passwords. However in order to view this specific paste, you must complete this URL by adding the MD5 hash to the end of the URL.
-
-http://depasteon6cqgrykzrgya52xglohg5ovyuyhte3ll7hzix7h5ldfqsyd.onion/show.php?md5=0a5c6e136a98a60b8a21643ce8c15a74
 
 ### What is the BSSID for the attacker's Home WiFi?
 
@@ -116,7 +113,7 @@ An account (free) is needed for wigle.net. Doing an advanced search and using in
 
 Go to wigle.net, click on view, then click on advanced search and enter the user's network names. 
 
-![Wiggle]()
+![bssidwigle]()
 
 Here we can see the user's BSSID, and more information that might be relevant for the next task so don't close Wigle. 
 
@@ -145,11 +142,11 @@ The attacker clearly states this is their last layover. We can search for Japan 
 
 For image search I prefer to use Yandex before Google since the two often return different images. I simply saved the image and searched and the first result looks very similar to the picture in the attackers tweet. 
 
-![reverseimage}]
+![reverseimagelake]()
 
 clicking on it we can determine this lake is located in Japan.
 
-![lakereverseimage]()
+![reverseimageresult]()
 
 looking at google maps and zooming in we can find the lake.
 
