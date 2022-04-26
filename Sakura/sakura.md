@@ -27,13 +27,13 @@ The attacker has reused this username through social media, this will help us ga
 
 ### What is the full email address used by the attacker?
 
-Firstly, use the user name we found in the first task and do a simple google search. 
-That search gives us some interesting results. First we see that user has a GitHub account. Going to GitHub we can see they have several repositories, one of them is called PGP. Surprisingly this repository contains a PGP key. This can be useful information.  
+Firstly, use the username we found in the first task and do a simple google search. Tools like Sherlock or Spiderfoot can also be used to look up associated accounts with this username.
+The google search gives us some interesting results. First we see that user has a GitHub account. Going to GitHub we can see they have several repositories, one of them is called PGP. Surprisingly this repository contains a PGP key. This can be useful information since PGP is used for signing, encrypting and decrypting texts, emails, etc.  
 
 I downloaded the repo from GitHub and then unzipped the file.
-Let's decrypt the PGP we found:
+We can obtain the email address by using gpg
 
-![PublicKey](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/publickey.png)
+![PublicKey](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/gpg.png)
 
 Here we can find the user's email address.
 
