@@ -58,7 +58,7 @@ Upon clicking on the repo, we can see there is only a mining script file. Nothin
 
 ### What is the attacker's cryptocurrency wallet address?
 
-We can gather this information from the above image. 
+We can gather this information from the image above. 
 
 ### What mining pool did the attacker receive payments from on January 23, 2021 UTC?
 
