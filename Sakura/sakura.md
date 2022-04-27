@@ -3,7 +3,6 @@
 # [SAKURA](https://tryhackme.com/room/sakura)  - created by [OSINT DOJO]((https://www.osintdojo.com))
 
 This room was created to test different OSINT techniques and take us through a sample OSINT investigation in which we will identify a number of identifiers and other information to help catch a cybercriminal. Answers will be obtained using passive OSINT techniques.
-Task five gives you the option to get answers from the Dark Web, however, I attempted this and the Deep Paste links didn't work. 
 
 Task 1 include a basic intro. So lets start with task 2. 
 
@@ -102,11 +101,11 @@ They are refering to a paste site called Deep Paste.
 
 There is a hint here. This is the task I mentioned at the beginning, were deep paste was unavailable. 
 
-Here is a list of the Deep Web Pastebin Links https://deepweblinks.net/pastebin/ in case you want to try to use the Dark Web to answer this question. 
+Here is a list of the Deep Web Pastebin Links https://deepweblinks.net/pastebin/ in case you want to try to use the Dark Web to answer this question. I used this link: http://depasteon6cqgrykzrgya52xglohg5ovyuyhte3ll7hzix7h5ldfqsyd.onion/show.php and entered the MD5 hash on the screenshot the attacker Tweeted. 
 
-![deeppaste](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/deeppaste.jpg)
+![deeppaste](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/deeppaste.jpg.png)
 
-Using the image provided by OSINT Dojo, we can see the URL for the location where the attacker save their WiFi SSIDs and passwords. However in order to view this specific paste, you must complete this URL by adding the MD5 hash to the end of the URL.
+After finding the attacker's SSIDs and passwords saved to Deep Paste we can search for the BSSID.
 
 ### What is the BSSID for the attacker's Home WiFi?
 
