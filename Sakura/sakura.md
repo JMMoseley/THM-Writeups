@@ -14,11 +14,14 @@ OSINT Dojo have found themselves victims of a cyber-attack. While there were not
 
 ### What username does the attacker go by?
 
-Upon clicking on the link to download the image we can see that the link takes us to a GitHub page containing an image which has binary numbers as the background. I originally thought there could be a message here, or maybe more information in the metadata for this image. I was not able to do a quick save of this image to analyze it with Exiftool. So instead I looked at the source code for the page.
+Upon clicking on the link to download the image we can see that the link takes us to a GitHub page containing an image which has binary numbers as the background. I originally thought there could be a message here, but I was wrong.
+I looked at the source code for the page and also downloaded the image to inspect the metadata.
 
-Going through the page source we can see that there is a file path for the image with the user name we are looking for. 
+Going through the page source we can see that there is a file path for the image with the username we are looking for. We can also get the same result using exiftool.
 
 ![sourcecode](https://github.com/JMMoseley/THM-Writeups/blob/main/Sakura/images/sourcecode.png)
+
+![exiftool](https://github.com/joaconstrictor/THM-Writeups/blob/main/Sakura/images/exiftool.jpg)
 
 ## Task 3 - Recon
 
