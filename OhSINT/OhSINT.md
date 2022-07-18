@@ -44,7 +44,7 @@ To find the SSID (Service Set Identifier) which identifies the wireless network 
 
 The user has shared his BSSID (Basic service set identifier) in a tweet! If you don't know what to do with this information you can visit [Osint Curious Website](https://osintcurio.us/2019/01/15/tracking-all-the-wifi-things/) and read more about wigle.net. 
 
-![wigle](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/wiglescreenshot.pngg)
+![wigle](https://github.com/JMMoseley/THM-Writeups/blob/main/OhSINT/Images/wiglescreenshot.png)
 
 Using the wigle.net search, I find a purple circle pointing to the location and zoom in as far as I can to see the SSID.
 
