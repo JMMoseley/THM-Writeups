@@ -7,5 +7,6 @@ These are some of the rooms I have completed in TryHackMe. I hope these writeups
 
 Thanks for visiting!
 
+- [OhSINT](https://github.com/joaconstrictor/THM-Writeups/blob/main/OhSINT/OhSINT.md)
 
-
+- [Sakura](https://github.com/joaconstrictor/THM-Writeups/blob/main/Sakura/sakura.md)
